@@ -7,6 +7,7 @@ const openSans = Open_Sans({
   subsets: ["latin"],
   display: "swap",
 });
+
 export const metadata: Metadata = {
   title: {
     template: "%s - CRWN Clothing",
@@ -21,11 +22,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <>
-      <html dir="ltr" lang="he" suppressHydrationWarning>
+    <html dir="ltr" lang="he" suppressHydrationWarning>
+      <head />
+      <body className={`${openSans.className} antialiased p-10 h-screen`}>
         <Header />
-        <body className={`${openSans.className} antialiased p-10 h-screen`}>{children}</body>
-      </html>
-    </>
+        {children}
+      </body>
+    </html>
   );
 }
