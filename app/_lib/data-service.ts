@@ -5,3 +5,8 @@ export async function getCollections() {
   if (error) throw error;
   return data;
 }
+export async function getItems() {
+  const { data, error } = await supabase.from("items").select("*");
+  if (error) throw error;
+  return data;
+}
