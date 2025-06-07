@@ -22,7 +22,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html dir="ltr" lang="he" suppressHydrationWarning>
+    <html dir="ltr" lang="en" suppressHydrationWarning>
       <head />
       <body className={`${openSans.className} antialiased p-10 h-screen`}>
         <Header />

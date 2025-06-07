@@ -11,5 +11,5 @@ export interface Item{
     name: string;
     price: number;
     image_url: string;
-    conllections_id: number;
+    collections_id: number;
 }
