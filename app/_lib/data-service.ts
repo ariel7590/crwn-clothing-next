@@ -13,7 +13,7 @@ export async function getItems() {
 export async function getItemsByCollectionId(collectionId: number) {
   const { data, error } = await supabase
     .from("items")
-    .select("*")
+    .select("*, collections(name)")
     .eq("collections_id", collectionId);
   if (error) throw new Error(error.message);
   return data;

@@ -22,11 +22,16 @@ const page = async ({
 			{!items || items.length === 0 ? (
 				<NoItemsFallback />
 			) : (
+				<>
+				<h1 className="uppercase text-center text-3xl mb-5">
+					{items[0].collections.name}
+				</h1>
 				<div className='grid grid-cols-4 gap-3 h-screen'>
 					{items.map((item) => (
 						<ShopItem key={item.id} item={item} />
 					))}
 				</div>
+				</>
 			)}
 		</>
 	);

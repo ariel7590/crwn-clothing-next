@@ -1,11 +1,13 @@
-import type { Metadata } from "next";
-import { Open_Sans } from "next/font/google";
-import "./globals.css";
 import Header from "@/app/_components/header/header";
+import type { Metadata } from "next";
+import { PT_Sans_Narrow } from "next/font/google";
+import "./globals.css";
 
-const openSans = Open_Sans({
+
+const ptSansNarrow = PT_Sans_Narrow({
   subsets: ["latin"],
   display: "swap",
+  weight: "400"
 });
 
 export const metadata: Metadata = {
@@ -13,7 +15,7 @@ export const metadata: Metadata = {
     template: "%s - CRWN Clothing",
     default: "Welcome - CRWN Clothing",
   },
-  description: "ilaka eSports",
+  description: "crwn clothing - best clothing store in the world",
 };
 
 export default function RootLayout({
@@ -24,7 +26,7 @@ export default function RootLayout({
   return (
     <html dir="ltr" lang="en" suppressHydrationWarning>
       <head />
-      <body className={`${openSans.className} antialiased p-10 h-screen`}>
+      <body className={`${ptSansNarrow.className} antialiased p-10 h-screen`}>
         <Header />
         {children}
       </body>
