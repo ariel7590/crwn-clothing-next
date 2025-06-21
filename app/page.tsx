@@ -11,16 +11,16 @@ export default async function Home() {
 		return (
 			<div
 				key={collection.id}
-				className='relative border cursor-pointer overflow-hidden'
+				className='relative border cursor-pointer overflow-hidden group'
 			>
 				<Image
 					fill
-					className='object-cover transform scale-100 transition-transform duration-5000 hover:scale-150'
+					className='object-cover transform scale-100 transition-transform duration-5000 group-hover:scale-150'
 					src={collection.image}
 					alt=''
 				/>
 				<Link href={`/shop/${collection.id}`}>
-					<ShopItemsOverlay className="right-36">
+					<ShopItemsOverlay className="right-1/3">
 						<div className='text-center'>{collection.name}</div>
 						<div className='text-center'>SHOP NOW</div>
 					</ShopItemsOverlay>

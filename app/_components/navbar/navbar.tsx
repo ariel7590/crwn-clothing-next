@@ -2,6 +2,7 @@ import Link from "next/link";
 import cart from "@/public/cart-icon.svg";
 import Image from "next/image";
 import { auth } from "@/app/_lib/auth";
+import ShoppingCart from "../shopping-cart/shopping-cart";
 
 const Navbar = async () => {
   const session = await auth();
@@ -18,15 +19,7 @@ const Navbar = async () => {
       <Link href="/shop">shop</Link>
       <Link href="/contact">contact</Link>
       <Link href="/signin">sign in</Link>
-      <div>
-        <Image
-          src={cart}
-          width="30"
-          height="30"
-          alt="shopping cart"
-          className="mb-2"
-        />
-      </div>
+      <ShoppingCart />
     </div>
   );
 };
