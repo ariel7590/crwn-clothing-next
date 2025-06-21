@@ -20,7 +20,7 @@ export default async function Home() {
 					alt=''
 				/>
 				<Link href={`/shop/${collection.id}`}>
-					<ShopItemsOverlay>
+					<ShopItemsOverlay className="right-36">
 						<div className='text-center'>{collection.name}</div>
 						<div className='text-center'>SHOP NOW</div>
 					</ShopItemsOverlay>

@@ -10,15 +10,19 @@ interface ShopItemProps {
 const ShopItem = ({ item }: ShopItemProps) => {
 	return (
 		<div className='flex flex-col '>
-			<div className='relative h-[400px] w-full'>
+			<div className='relative h-[400px] w-full group'>
 				<Image
 					src={item.image_url}
 					fill
 					alt={item.name}
-					className='object-cover hover:brightness-200 relative'
+					className='object-cover relative'
 				/>
-				<ShopItemsOverlay className="h-2 w-60 top-10 right-28">
+				<div className="bg-white opacity-20 absolute top-0 left-0 w-full h-full hidden group-hover:block" />
+				<ShopItemsOverlay className="h-2 w-60 top-10 right-10 hidden group-hover:flex hover:bg-black hover:text-white hover:border-black cursor-pointer">
 					<div>View Item</div>
+				</ShopItemsOverlay>
+				<ShopItemsOverlay className="h-2 w-60 top-72 right-10 hidden group-hover:flex hover:bg-black hover:text-white hover:border-black cursor-pointer">
+					<div>add to cart</div>
 				</ShopItemsOverlay>
 			</div>
 			<div className='flex justify-between p-2 bg-white'>
